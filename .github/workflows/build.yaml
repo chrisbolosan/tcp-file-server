@@ -1,0 +1,31 @@
+name: C++ TCP server CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v3
+
+    - name: install dependencies
+      run: sudo apt-get update && sudo apt-get install -y g++ make netcat
+
+    - name: build server
+      run: g++ -o tcp src/main.cpp src/server.cpp src/request.cpp src/utils.cpp
+
+    - name: run basic test
+      run: |
+        echo "Initializing test..."
+        ./tcp 9000 ./webroot &
+        SERVER_PID=$!
+        sleep 1
+        nc -vz localhost 9000
+        kill $SERVER_PID
+

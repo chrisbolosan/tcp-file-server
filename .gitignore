@@ -22,3 +22,9 @@ tcp
 # Shell script temp files
 *.tmp
 
+# Docker-related (ignore built images, but keep Dockerfile)
+docker-image-*.tar
+
+# Optional: ignore node_modules if any accidental JS dependencies
+node_modules/
+

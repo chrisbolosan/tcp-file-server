@@ -66,6 +66,17 @@ or
 nc localhost 9000
 ```
 
+## Docker Usage
+- Build and run the server in a container:
+```bash
+# Build the docker image
+docker build -t tcp-server .
+
+# Run the container and map to port 9000
+docker run -p 9000:9000 tcp-server
+```
+-You can still access via telnet or netcat just like above. This demonstrates basic containerization.
+
 ## Example session:
 ```text
 GET /index.html
