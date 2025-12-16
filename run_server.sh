@@ -1,3 +1,6 @@
+# Simple TCP File Server
+# Copyright 2025 Chris Bolosan
+# Licensed under the MIT License
 #!/bin/bash
 # Simple script compile and run TCP server
 PORT=${1:-9000}

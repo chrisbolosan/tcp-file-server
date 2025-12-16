@@ -1,3 +1,14 @@
+/*
+ * Simple TCP File Server
+ * Author: Chris Bolosan, 2025
+ *
+ * Licensed under the MIT License. See LICENSE file for details.
+ *
+ * This code is intended for educational and personal use.
+ * Copying this code for assignments or other academic submissions
+ * without permission is prohibited and may violate academic honesty policies.
+ */
+
 #include "server.h"
 #include <cstring>
 #include <dirent.h>

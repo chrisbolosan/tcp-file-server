@@ -87,3 +87,8 @@ Connection closed by foreign host.
 - Hidden files (starting with .) are skipped
 - Only handles GET requests; other HTTP methods return an error
 - Memory management is done manually (malloc/free)
+
+## Academic Use
+
+This project is my original work. Copying for school assignments or other academic submissions
+without permission is prohibited and may violate academic honesty policies.
