@@ -1,0 +1,24 @@
+# Compiled binary
+tcp
+
+# Object files
+*.o
+
+# Backup / editor files
+*.swp
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Makefile temporary files (if any)
+*.d
+
+# IDE/project files
+.idea/
+.vscode/
+
+# Shell script temp files
+*.tmp
+
