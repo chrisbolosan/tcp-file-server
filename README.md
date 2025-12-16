@@ -32,18 +32,21 @@ This is a **simple TCP HTTP-style file server** implemented in C++ that handles 
 ### Option 1: Compile manually with g++
 ```bash
 g++ -o tcp src/main.cpp src/server.cpp src/request.cpp src/utils.cpp
-
+```
 ## Option 2: Compile with Makefile
 ```bash
 make
+```
 
 ## Usage
 ```bash
 ./tcp <port> <root-directory>
+```
 
 **Example**
 ```bash
 ./tcp 9000 ./webroot
+```
 
 ## Running with Shell Script (Optional)
 - You can also use the included run_server.sh script for convenience:
@@ -51,26 +54,33 @@ make
 - Default root directory: current directory
 ```bash
 ./run_server.sh 9000 ./webroot
+```
 
 ## Testing with telnet/nc
 ```bash
 telnet localhost 9000
+```
 
 or
-
+```bash
 nc localhost 9000
+```
 
 ## Example session:
+```text
 GET /index.html
 Client requested: GET /index.html
 <contents of index.html printed here>
 Connection closed by foreign host.
+```
 
 ## For directories without index.html:
+```text
 GET /files
 Client requested: GET /files
 file1.txt file2.txt subfolder
 Connection closed by foreign host.
+```
 
 ## Security/Notes
 - Blocks requests containing .. to prevent directory traversal
